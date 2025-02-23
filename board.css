@@ -9,8 +9,21 @@ body{
     justify-content: space-around;
     align-items: center;
     height: 100vh;
-    background-color: rgb(78, 78, 78);
+    background-color:white;
+    flex-direction: column;
 }
+nav{
+    height: 18vh;
+    width: 100%;
+    font-size: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(79, 75, 75);
+    font-weight: bold;
+    font-family: 'roboto','Courier New', Courier, monospace;
+}
+
 #board{
     width: 700px;
     height: 700px;
