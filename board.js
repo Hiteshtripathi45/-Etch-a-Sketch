@@ -32,6 +32,10 @@ scolor.addEventListener('input',()=>{
     console.log(colour)
 })
 
+scolor.addEventListener('click',()=>{
+    rain=false
+})
+
 board.addEventListener('mousedown',(e)=>{
     if(e.target.matches('.inner')){
         trues = 1
@@ -41,7 +45,12 @@ board.addEventListener('mousedown',(e)=>{
 })
 board.addEventListener('mousemove',(e)=>{
     if((e.target.matches('.inner')) && (trues==1)){
-        e.target.style.backgroundColor=colour
+        if(rain==false){
+            e.target.style.backgroundColor=colour
+        }
+            else{
+                e.target.style.backgroundColor=getRandomColor()
+            }
     }
 
 
@@ -59,3 +68,9 @@ document.getElementById('eraser').addEventListener('click',()=>{colour='#FFFFFF'
 document.getElementById('clear').addEventListener('click',()=>{sizeselector(size.value)})
 
 
+function getRandomColor() {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
+let rain = false
+document.getElementById('rainbow').addEventListener('click',()=>{rain=true})
