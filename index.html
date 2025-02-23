@@ -15,19 +15,21 @@
 
 <body>
     <nav>Etch-a-Sketch</nav>
-    <div class="same" id="colour">
-        <button class="colour">ereser</button>
-        <button class="colour">black</button>
-        <button class="colour">red</button>
-        <button class="colour">blue</button>
-        <button class="colour">green</button>
+    <div class="main">
+        <div class="same" id="colour">
+            <input id="colourpicker" type="color">
+            <div class="same" id="size">
+                <button class="sizes">16</button>
+                <button class="sizes">50</button>
+                <button class="sizes"> 100</button>
+            </div>   
+        </div>
+
+        <div class="main2">
+            <div id="board"></div> 
+        </div>
     </div>
-    <div id="board"></div>
-    <div class="same" id="size">
-        <button class="sizes">16</button>
-        <button class="sizes">50</button>
-        <button class="sizes"> 100</button>
-    </div>
+   
     <script src="board.js"></script>
 </body>
 

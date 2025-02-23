@@ -8,9 +8,10 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color:white;
     flex-direction: column;
+    width: 100%;
 }
 nav{
     height: 18vh;
@@ -24,12 +25,29 @@ nav{
     font-family: 'roboto','Courier New', Courier, monospace;
 }
 
+.main{
+    width:100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.main2{
+    width: 600px;
+    height: 600px;
+    display: flex;
+
+}
+
 #board{
-    width: 700px;
-    height: 700px;
+    width: 400px;
+    height: 400px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
+    border: none;
+    box-shadow: 0 0 10px black;
     justify-content: center;
     align-items: center;
 
@@ -44,7 +62,7 @@ nav{
     background-color: rgb(37, 65, 65);
     padding: 20px;
     border-radius: 10px;
-}
+} 
 .inner{
     border: 1px solid black;
 }
@@ -57,4 +75,32 @@ button{
     background-color: black;
     border: none;
 
+}
+#colourpicker{
+    appearance: none;
+    height: 80px;
+    width: 70px;
+    border-radius:50%;
+    border: silver;
+    padding: 0;
+    overflow: hidden;
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+
+#colourpicker::-webkit-color-swatch {
+    border-radius: 50%;  /* Makes inside color preview circular */
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+#colourpicker::-moz-color-swatch {
+    border-radius: 50%;
+    border: none;
+    width: 100%;
+    height: 100%;
 }
