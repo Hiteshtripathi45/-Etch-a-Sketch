@@ -55,3 +55,7 @@ board.addEventListener('mouseup',(e)=>{
 })
 
 
+document.getElementById('eraser').addEventListener('click',()=>{colour='#FFFFFF'})
+document.getElementById('clear').addEventListener('click',()=>{sizeselector(size.value)})
+
+
