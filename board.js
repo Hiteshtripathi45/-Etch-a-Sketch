@@ -3,7 +3,8 @@ const board = document.getElementById('board')
 const size = document.getElementById('size')
 const rangename = document.getElementById('rangename')
 let trues = 0
-let eraseractive =false
+let  eraserActive = false
+let rain = false
 
     size.addEventListener('click',()=>sizeselector(size.value))
    
@@ -74,5 +75,5 @@ function getRandomColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-let rain = false
+
 document.getElementById('rainbow').addEventListener('click',()=>{rain=true, eraserActive = false; })
