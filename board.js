@@ -58,7 +58,6 @@ board.addEventListener('mousemove', (e) => {
 
 
 
-})
 board.addEventListener('mouseup',(e)=>{
     if(e.target.matches('.inner')){
         trues = 0
