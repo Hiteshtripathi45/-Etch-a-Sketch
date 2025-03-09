@@ -3,7 +3,7 @@ const board = document.getElementById('board')
 const size = document.getElementById('size')
 const rangename = document.getElementById('rangename')
 let trues = 0
-const eraseractive =false
+let eraseractive =false
 
     size.addEventListener('click',()=>sizeselector(size.value))
    
