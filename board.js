@@ -3,6 +3,7 @@ const board = document.getElementById('board')
 const size = document.getElementById('size')
 const rangename = document.getElementById('rangename')
 let trues = 0
+const eraseractive =false
 
     size.addEventListener('click',()=>sizeselector(size.value))
    
@@ -43,15 +44,17 @@ board.addEventListener('mousedown',(e)=>{
     }
 
 })
-board.addEventListener('mousemove',(e)=>{
-    if((e.target.matches('.inner')) && (trues==1)){
-        if(rain==false){
-            e.target.style.backgroundColor=colour
+board.addEventListener('mousemove', (e) => {
+    if (e.target.matches('.inner') && trues == 1) {
+        if (eraserActive) {
+            e.target.style.backgroundColor = '#FFFFFF';
+        } else if (rain) {
+            e.target.style.backgroundColor = getRandomColor();
+        } else {
+            e.target.style.backgroundColor = colour; 
         }
-            else{
-                e.target.style.backgroundColor=getRandomColor()
-            }
     }
+});
 
 
 
@@ -64,7 +67,7 @@ board.addEventListener('mouseup',(e)=>{
 })
 
 
-document.getElementById('eraser').addEventListener('click',()=>{colour='#FFFFFF', rain = false;})
+document.getElementById('eraser').addEventListener('click',()=>{ eraserActive = true , rain = false;})
 document.getElementById('clear').addEventListener('click',()=>{sizeselector(size.value)})
 
 
@@ -73,4 +76,4 @@ function getRandomColor() {
 }
 
 let rain = false
-document.getElementById('rainbow').addEventListener('click',()=>{rain=true})
+document.getElementById('rainbow').addEventListener('click',()=>{rain=true, eraserActive = false; })
